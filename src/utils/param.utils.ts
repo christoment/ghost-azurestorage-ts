@@ -1,4 +1,4 @@
-export function resolveStringParam(anyValue: unknown): boolean {
+export function resolveStringParam(anyValue: unknown): boolean | null {
 	if (anyValue === 'false' || anyValue === false) {
 		return false;
 	}
@@ -7,9 +7,9 @@ export function resolveStringParam(anyValue: unknown): boolean {
 		return true;
 	}
 
-	console.log(
-		`Expected boolean-ish parameter. Observed value: ${anyValue}. Falling back to truthy check.`
+	console.error(
+		`Expected boolean-ish parameter. Observed value: ${anyValue}. Falling back to null.`
 	);
   
-	return !!anyValue;
+	return null;
 }
