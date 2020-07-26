@@ -24,7 +24,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "azure-storage": "^2.10.3",
+    "@azure/storage-blob": "^12.2.0-preview.1",
     "ghost-storage-base": "0.0.5",
     "node-fetch": "^2.6.0"
   },
